@@ -1,0 +1,14 @@
+% kubebuilder
+
+# Install kubebuilder(latest)
+curl -L -o kubebuilder https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH); \
+  chmod +x kubebuilder; \
+  mv kubebuilder /usr/local/bin/;
+
+# Init project
+mkdir <project>; \
+  cd "$_"; \
+  kubebuilder init --domain <domain> --repo <domain>/<repo>;
+
+# Create API
+kubebuilder create api --group <group> --version <version> --kind <kind>

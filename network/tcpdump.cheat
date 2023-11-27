@@ -1,0 +1,4 @@
+% tcpdump
+
+# Dump traffic from specifies host and port
+tcpdump -nnn -i any src host <host> and port <port> -tttt -Zroot

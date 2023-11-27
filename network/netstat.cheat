@@ -1,4 +1,7 @@
-% network
+% netstat
 
-# Watch net connection status group by TCP status.
+# Watch net connection status group by TCP status
 watch "netstat -ant | awk '"'{print $NF}'"' | grep -v '[a-z]' | sort | uniq -c | sort -nr"
+
+# Show the state of all sockets, network addresses as numbers
+netstat -ant
