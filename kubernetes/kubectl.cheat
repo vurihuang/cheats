@@ -1,0 +1,4 @@
+% kubectl
+
+# Get pods from specifies node
+kubectl get po -A -o wide --field-selector spec.nodeName="<node_name>"

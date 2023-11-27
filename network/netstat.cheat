@@ -1,0 +1,4 @@
+% network
+
+# Watch net connection status group by TCP status.
+watch "netstat -ant | awk '"'{print $NF}'"' | grep -v '[a-z]' | sort | uniq -c | sort -nr"
